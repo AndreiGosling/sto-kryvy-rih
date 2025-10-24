@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; 
+}
+
+#zagolovok{
+    color: rgb(209, 207, 207);
+    text-align: center;
+    font-family: Arial;
+    font-size: 70px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+#podzagolovok{
+    color: rgb(209, 207, 207);
+    text-align: center;
+    font-family: Arial;
+    padding: auto;
+    
+}
+.spisok{
+    background-color: rgba(30, 29, 29, 0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 400px;
+    color: #eaeaea;
+    font-size: 30px;
+    font-family:Arial;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    
+}
+.spisok li {
+  margin-bottom: 30px; 
+  transition: transform 0.2s ease, color 0.2s ease;
+  
+}
+.btn {
+    background: linear-gradient(90deg, #ff7a00, #ff5200);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;          
+    margin: 20px auto 0;
+
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 120, 0, 0.6);
+}
+.btn:active{
+  transform: scale(0.95);
+  box-shadow: 0 0 6px rgba(255, 120, 0, 0.4);
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes jelly {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.2, 0.8); }
+  50% { transform: scale(0.9, 1.1); }
+  75% { transform: scale(1.05, 0.95); }
+}
+.btn.jelly {
+  animation: jelly 0.6s ease;
+}
+.spisok a{
+  color:inherit;
+  text-decoration:none;
+  display:block;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.spisok a:hover{
+  color: orange;             
+  transform: translateX(10px);
+}
+.footer{
+  background-color: rgba(30, 29, 29, 0.85);
+  backdrop-filter: blur(6px);
+  color: #d1d1d1;
+  text-align: center;
+  font-family: Arial;
+  font-size: 16px;
+  padding: 30px 10px;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer a {
+  color: orange;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffb84d;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 40px;
+  width: 90%;
+  margin: 80px auto;
+  padding-bottom: 100px;
+}
+
+.gallery-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.gallery img {
+  width: 300px;
+  max-width: 90vw; 
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 120, 0, 0.5);
+}
+
+.arrow {
+  font-size: 2rem;
+  color: #f97316;
+  font-weight: bold;
+}
+#call-info {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  font-family: Arial;
+  text-decoration:none;
+}
+
+#call-info.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#call-info a {
+  color: #f97316;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#call-info a:hover {
+  color:rgb(252, 145, 50) ;
+
+}
+
+@media (max-width: 700px) {
+  .gallery-pair {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .arrow {
+    transform: rotate(90deg); 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    height: auto; 
+  }
+
+  #zagolovok {
+    font-size: 45px;
+  }
+
+  #podzagolovok {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .spisok {
+    width: 100%;
+    max-width: 350px;
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .spisok li {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  #zagolovok {
+    font-size: 35px;
+  }
+
+  #podzagolovok {
+    font-size: 18px;
+  }
+
+  .spisok {
+    font-size: 20px;
+    max-width: 300px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+}
+.spisok, .footer {
+  transform: translateZ(0);
+}
+.route-btn {
+  background: linear-gradient(90deg, #ff7a00, #ff5200);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  margin: 20px auto 0;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+  font-family: Arial;
+}
+
+.route-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 120, 0, 0.6);
+}
+
+.route-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 6px rgba(255, 120, 0, 0.4);
+}
